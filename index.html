@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>산뜻 Sanddeut</title>
+<meta name="description" content="산뜻(Sanddeut) — 일상의 기록을 돕는 모바일 앱을 만듭니다. 통증일기, 인지행동메이트, 베베로그.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --card: #ffffff;
+    --ink: #1d1d1f;
+    --sub: #6b6b70;
+    --line: #e8e6e1;
+    --accent: #2f8f6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --card: #1e1e1f;
+      --ink: #f2f2f2;
+      --sub: #a0a0a6;
+      --line: #2c2c2e;
+      --accent: #5cc49b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 40px; }
+  .brand { font-size: 15px; font-weight: 700; color: var(--accent); letter-spacing: .02em; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.25; margin: 12px 0 16px; letter-spacing: -.02em; }
+  .lead { font-size: 18px; color: var(--sub); margin: 0; }
+  h2 { font-size: 20px; margin: 56px 0 18px; }
+  .apps { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .app {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .app img { width: 64px; height: 64px; border-radius: 15px; border: 1px solid var(--line); }
+  .app h3 { font-size: 18px; margin: 16px 0 6px; }
+  .app p { margin: 0 0 18px; color: var(--sub); font-size: 15px; flex: 1; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .links a, .links span {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  .links span { color: var(--sub); }
+  .info {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 8px 24px;
+    margin: 0;
+  }
+  .info div { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .info div:last-child { border-bottom: 0; }
+  .info dt { width: 120px; flex-shrink: 0; color: var(--sub); }
+  .info dd { margin: 0; word-break: keep-all; }
+  .info a { color: var(--accent); }
+  footer { padding: 48px 0 64px; color: var(--sub); font-size: 13px; }
+  @media (max-width: 520px) {
+    .info div { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">산뜻 · Sanddeut</div>
+    <h1>일상의 기록을<br>조금 더 산뜻하게</h1>
+    <p class="lead">몸과 마음, 그리고 아이의 하루를 쉽게 기록하고 돌아볼 수 있는 모바일 앱을 만듭니다.</p>
+  </header>
+
+  <h2>서비스</h2>
+  <div class="apps">
+
+    <article class="app">
+      <img src="img/paindiary.jpg" alt="통증일기 아이콘">
+      <h3>통증일기</h3>
+      <p>0~10 척도로 통증 강도를 3초 만에 기록하고, 위치·양상·상황까지 정리해 진료 때 의사와 정확하게 소통할 수 있어요.</p>
+      <div class="links">
+        <a href="https://apps.apple.com/kr/app/id6479562871">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.slowhammer.painDiary">Google Play</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <img src="img/cbtmate.jpg" alt="인지행동메이트 아이콘">
+      <h3>인지행동메이트</h3>
+      <p>인지행동치료(CBT) 기반 감정 일기. AI가 일기를 사실과 생각으로 나누고 숨은 인지왜곡을 찾아 대안적 사고를 도와줘요.</p>
+      <div class="links">
+        <a href="https://apps.apple.com/kr/app/id6759197649">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.sddt.cbtmate">Google Play</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <img src="img/bebelog.png" alt="베베로그 아이콘">
+      <h3>베베로그</h3>
+      <p>수유·이유식·배변·수면을 한 번의 탭으로. 가족이 함께 쓰는 육아 기록 앱으로 패턴과 성장을 한눈에 볼 수 있어요.</p>
+      <div class="links">
+        <span>출시 준비 중</span>
+      </div>
+    </article>
+
+  </div>
+
+  <h2>사업자 정보</h2>
+  <dl class="info">
+    <div><dt>상호</dt><dd>산뜻 (Sanddeut)</dd></div>
+    <div><dt>대표자</dt><dd>박해린</dd></div>
+    <div><dt>사업자등록번호</dt><dd>476-02-03663</dd></div>
+    <div><dt>통신판매업 신고</dt><dd>2025-안양동안-0033</dd></div>
+    <div><dt>주소</dt><dd>경기도 안양시 동안구 시민대로327번길 11-41, 3층 3593호</dd></div>
+    <div><dt>이메일</dt><dd><a href="mailto:sanddeuts@gmail.com">sanddeuts@gmail.com</a></dd></div>
+  </dl>
+
+  <footer>© 2026 산뜻 Sanddeut. All rights reserved.</footer>
+
+</div>
+</body>
+</html>
